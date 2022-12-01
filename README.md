@@ -2,7 +2,7 @@
 
 Just simple execute file 'run'.
 
-dependencies:
 
+dependencies:
 gcc
 clang
