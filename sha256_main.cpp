@@ -52,6 +52,6 @@ int main(int argc, char *argv[])
         n++;
     }
 
-    cout << n << " -times sha256('"<< "grape" << "'): " << output << endl;
+    cout << n << " -times sha256('" << "grape" << "'): " << output << endl;
     return 0;
 }
