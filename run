@@ -1,14 +1,15 @@
 #! /bin/bash
+lscpu
+echo ""
+echo ""
 echo ""
 echo "Compilation starts..."
-echo ""
 g++ int.cpp -O3 -o gcc_int.elf
 g++ float.cpp -O3 -o gcc_float.elf
 g++ sha256.cpp -O3 sha256_main.cpp -o gcc_sha256.elf
 clang++ int.cpp -O3 -o clang_int.elf
 clang++ float.cpp -O3 -o clang_float.elf
 clang++ sha256.cpp -O3 sha256_main.cpp -o clang_sha256.elf
-echo ""
 echo "Done!"
 echo ""
 echo ""
