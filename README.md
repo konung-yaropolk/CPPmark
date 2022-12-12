@@ -4,5 +4,6 @@ Just simple execute file 'run'.
   
   
 dependencies:  
-gcc,  
+
+gcc  
 clang  
