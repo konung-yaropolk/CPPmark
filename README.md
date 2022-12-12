@@ -3,6 +3,7 @@
 Just simple execute file 'run'.
 
 
-dependencies:
-  gcc,
-  clang
+dependencies:  
+
+gcc,  
+clang  
