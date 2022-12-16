@@ -48,6 +48,6 @@ time -p ./clang_sha256.elf
 echo ""
 echo ""
 echo ""
-echo "Anykey to exit..."
+echo "Do anykey to exit..."
 
 read
