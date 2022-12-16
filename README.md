@@ -1,6 +1,6 @@
 # CppCompilerMark
 
-Just simple execute file 'run'.
+Just simple execute file 'run' in bash
   
   
 dependencies:  
