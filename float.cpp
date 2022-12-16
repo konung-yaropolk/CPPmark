@@ -2,7 +2,7 @@
 
 int main() {
     int n=1;
-    float pi=1;
+    long double pi=1;
     while (n<100000000) {
         pi=pi * 2*n/(2*n-1) * 2*n/(2*n+1);
         n++;
