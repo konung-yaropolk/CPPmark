@@ -4,12 +4,15 @@ echo ""
 echo ""
 echo ""
 echo "Compilation starts..."
+
 g++ int.cpp -o gcc_int.elf
 g++ float.cpp -O3 -o gcc_float.elf
 g++ sha256.cpp sha256_main.cpp -O3 -o gcc_sha256.elf
+
 clang++ int.cpp -o clang_int.elf
 clang++ float.cpp -O3 -o clang_float.elf
 clang++ sha256.cpp sha256_main.cpp -O3 -o clang_sha256.elf
+
 echo "Done!"
 echo ""
 echo ""
@@ -45,6 +48,6 @@ time -p ./clang_sha256.elf
 echo ""
 echo ""
 echo ""
-echo "Done! Anykey to exit..."
+echo "Anykey to exit..."
 
 read
