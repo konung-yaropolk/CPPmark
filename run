@@ -23,7 +23,7 @@ echo ""
 echo "Integers:"
 time -p ./gcc_int.elf
 echo ""
-echo "Floats:"
+echo "Floats (long double):"
 time -p ./gcc_float.elf
 echo ""
 echo "SHA256:"
@@ -37,7 +37,7 @@ echo ""
 echo "Integers:"
 time -p ./clang_int.elf
 echo ""
-echo "Floats:"
+echo "Floats (long double):"
 time -p ./clang_float.elf
 echo ""
 echo "SHA256:"
