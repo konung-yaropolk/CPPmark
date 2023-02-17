@@ -15,7 +15,8 @@ g++ sha256.cpp sha256_main.cpp -O3 -o gcc_sha256.elf
 clang++ float.cpp -O3 -o clang_float.elf
 clang++ long.cpp -O3 -o clang_long.elf
 clang++ long_double.cpp -O3 -o clang_long_double.elf
-clang++ long_double.cpp -O3 -o -mlong-double-128 clang_long_double128.elf
+clang++ long_double.cpp -O3 -mlong-double-128 -o clang_long_double128.elf
+clang++ int.cpp -o gcc_int.elf
 clang++ sha256.cpp sha256_main.cpp -O3 -o clang_sha256.elf
 
 echo "Done!"
