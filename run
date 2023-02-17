@@ -3,14 +3,19 @@ lscpu
 echo ""
 echo ""
 echo ""
-echo "Compilation starts..."
+echo "Compilation stared..."
+
+g++ float.cpp -O3 -o gcc_float.elf
+g++ long.cpp -O3 -o gcc_long.elf
+g++ long_double.cpp -O3 -o gcc_long_double.elf
 
 g++ int.cpp -o gcc_int.elf
-g++ float.cpp -O3 -o gcc_float.elf
 g++ sha256.cpp sha256_main.cpp -O3 -o gcc_sha256.elf
 
-clang++ int.cpp -o clang_int.elf
 clang++ float.cpp -O3 -o clang_float.elf
+clang++ long.cpp -O3 -o clang_long.elf
+clang++ long_double.cpp -O3 -o clang_long_double.elf
+clang++ long_double.cpp -O3 -o -mlong-double-128 clang_long_double128.elf
 clang++ sha256.cpp sha256_main.cpp -O3 -o clang_sha256.elf
 
 echo "Done!"
@@ -19,12 +24,17 @@ echo ""
 
 echo "---GCC compiled---"
 echo ""
-
+echo "float (32bit):"
+time -p ./gcc_float.elf
+echo ""
+echo "long (64bit):"
+time -p ./gcc_long.elf
+echo ""
+echo "long double (80 bit):"
+time -p ./gcc_long_double.elf
+echo ""
 echo "Integers:"
 time -p ./gcc_int.elf
-echo ""
-echo "Floats (long double):"
-time -p ./gcc_float.elf
 echo ""
 echo "SHA256:"
 time -p ./gcc_sha256.elf
@@ -32,18 +42,26 @@ time -p ./gcc_sha256.elf
 echo ""
 echo ""
 echo ""
+
 echo "---Clang compiled---"
+echo ""
+echo "float (32bit):"
+time -p ./clang_float.elf
+echo ""
+echo "long (64bit):"
+time -p ./clang_long.elf
+echo ""
+echo "long double (80 bit):"
+time -p ./clang_long_double.elf
+echo ""
+echo "long double (128 bit):"
+time -p ./clang_long_double128.elf
 echo ""
 echo "Integers:"
 time -p ./clang_int.elf
 echo ""
-echo "Floats (long double):"
-time -p ./clang_float.elf
-echo ""
 echo "SHA256:"
 time -p ./clang_sha256.elf
-
-
 
 echo ""
 echo ""
